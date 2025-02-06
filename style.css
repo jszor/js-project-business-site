@@ -1,0 +1,50 @@
+/* Import Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Header */
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-container {
+  padding: 1% 0 0 4%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: .5rem;
+  padding: 5% 5% 0 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+/* Main */
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 1.5rem 0 0 1rem;
+}
