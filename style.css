@@ -180,10 +180,64 @@ footer {
   .grid-layout {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .nav-links {
+    margin: 0.8rem 1.4rem 0 0;
+  }
+
+  .logo {
+    width: 9rem;
+    height: 9rem;
+    margin: 1.5rem 0 0 1.5rem;
+  }
+
+  h1 {
+    margin-left: 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-top: 2rem;
+    justify-self: center;
+  }
+
+  .grid-layout {
+    margin: 0 3rem 0 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .grid-layout {
     grid-template-columns: repeat(4, 1fr);
+    margin: 0 2rem 0 2rem;
   }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .nav-links a {
+    font-size: 1.7rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Truncate text in cards */
+
+  .tea-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
 }
