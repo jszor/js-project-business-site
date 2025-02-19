@@ -1,17 +1,11 @@
-/* Import Font */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-/* Header */
 
 * {
   max-width: 100%;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
+/* Hero */
 
 .hero-container {
   position: relative;
@@ -46,6 +40,12 @@ body {
   font-size: 1rem;
   font-weight: 500;
   color: white;
+}
+
+/* Header */
+
+body {
+  margin: 0;
 }
 
 .logo {
@@ -213,6 +213,148 @@ footer {
   color: black;
 }
 
+/* Pop up card containing form for newsletter sign-up */
+
+.popup-card {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  transition: opacity 0.6s ease-in-out, visibility 0.4s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 0.5rem 2rem 1.5rem 2rem;
+  border-radius: 25px;
+  box-shadow: 5px 15px 35px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  transition: opacity 0.6s ease-in-out, visibility 0.4s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 999;
+}
+
+.show-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.show-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(41, 41, 41);
+}
+
+/* Newsletter sign up form contained in pop up card*/
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.popup-content h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.popup-content > p {
+  justify-self: center;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid silver;
+  border-radius: 25px;
+  padding: 0;
+}
+
+fieldset p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.submit-button {
+  min-width: 20%;
+  align-self: center;
+  margin-bottom: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid silver;
+  border-radius: 25px;
+  padding: 0.5rem;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+}
+
+label {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+label > span, label > a {
+  display: inline;
+  flex-grow: 0;
+}
+
+input, select {
+  width: 80%;
+}
+
+input#consent {
+  width: 5%;
+  margin-left: 3rem;
+}
+
+input#terms {
+  width: 5%;
+  margin-left: 3rem;
+}
+
+.newsletter-checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsletter-checkbox p {
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+  padding-right: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
@@ -249,6 +391,10 @@ footer {
     font-size: 1rem;
     margin-top: 2rem;
     justify-self: center;
+  }
+
+  .popup-content h2 {
+    margin-top: 1rem;
   }
 
   .grid-layout {
@@ -310,3 +456,4 @@ footer {
   }
 
 }
+

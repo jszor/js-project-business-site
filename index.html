@@ -114,6 +114,49 @@
         </div>
       </div>
     </div>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Pop up card containing form for subscribing to newsletter -->
+
+    <div class="popup-card" id="popup-card">
+      <button id="close-popup" class="close-btn">x</button>
+      <div class="popup-content">
+        <h2>sign up for our newsletter:</h2>
+        <p><span style="color: red;">*</span> indicates required field</p>
+        <form action="https://httpbin.org/anything" method="POST">
+          <fieldset>
+            <label> 
+              <p>name: <span style="color: red;">*</span></p>
+              <input type="text" name="name" required>
+            </label>
+            <label> <p>email: <span style="color: red;">*</span></p>
+              <input type="email" name="email" required>
+            </label>
+            <label> <p>birthday:</p>
+              <input type="date" name="birthday">
+            </label>
+            <label> <p>receive updates: <span style="color: red;">*</span></p>
+              <select name="update-frequency" id="update-frequency">
+                <option value="weekly">weekly</option>
+                <option value="monthly">monthly</option>
+                <option value="only-sales">only during sales</option>
+              </select>
+            </label>
+            <div class="newsletter-checkboxes">
+              <label class="newsletter-checkbox"> 
+                <input type="checkbox" id="consent" name="consent" required>
+                <p>I would like to receive emails and promotional offers. <span style="color: red;">*</span></p>
+              </label>
+              <label class="newsletter-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <p>I agree to the <a href="#">terms & privacy policy</a>. <span style="color: red;">*</span></p>
+              </label>
+            </div>
+            <input class="submit-button" type="submit" value="submit">
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </main>
   <hr>
   <footer>
@@ -134,5 +177,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
