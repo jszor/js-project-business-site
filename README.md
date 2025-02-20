@@ -19,3 +19,9 @@ This project is a business website for a fictional tea shop selling high-quality
 - Newsletter sign-up form: a pop-up card form that allows users to sign up for a newsletter.
 
 - Engaging UI: Styled with a minimalistic and clean aesthetic to reflect the brand image.
+
+## demo
+
+The page is live at chado.netlify.app
+
+@jszor
