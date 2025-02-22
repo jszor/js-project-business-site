@@ -63,20 +63,75 @@ nav {
 }
 
 .nav-links {
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  padding-top: 2.7rem;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: .5rem;
-  padding: 5% 5% 0 0;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-links.active {
+  right: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: black;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   font-weight: 500;
   flex-grow: 1;
+  }
+
+.hamburger-menu {
+  height: 2.3rem;
+  width: 2.3rem;
+  position: fixed;
+  top: 1.6rem;
+  right: 1.7rem;
+  z-index: 1000;
+}
+
+.hamburger-menu span {
+  height: 0.3rem;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* Main */
@@ -87,6 +142,7 @@ h1 {
   font-weight: 500;
   padding: 0.8rem 0 0 1rem;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 h2 {
@@ -374,8 +430,23 @@ input#terms {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .hamburger-menu {
+    display: none;
+  }
+
   .nav-links {
+    height: auto;
+    width: auto; 
+    max-width: auto;
+    position: static;
+    align-items: end;
+    gap: .5rem;
+    padding: 5% 5% 0 0;
     margin: 0.8rem 1.4rem 0 0;
+  }
+
+  .nav-links a {
+    font-size: 1.25rem;
   }
 
   .logo {
@@ -386,6 +457,7 @@ input#terms {
 
   h1 {
     margin-left: 3rem;
+    margin-top: 2rem;
   }
 
   h2 {
@@ -432,11 +504,16 @@ input#terms {
     margin-bottom: 3rem;
   }
 
+  .hamburger-menu {
+    display: none;
+  }
+
   .nav-links {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    margin-right: 7.5rem;
   }
 
   .nav-links a {

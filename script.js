@@ -1,3 +1,15 @@
+// Hamburger menu functionality
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const offScreenMenu = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
+});
+
+// Pop-up card containing form for newsletter sign-up
+
 let popupClosed = false;
 
 const closeButton = document.getElementById('close-popup');
