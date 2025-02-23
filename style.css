@@ -57,6 +57,12 @@ body {
   padding: 1% 0 0 4%;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -424,6 +430,10 @@ input#terms {
 
   .hero-image {
     object-position: 40% 50%;
+  }
+
+  header {
+    position: static;
   }
 
   .grid-layout {
