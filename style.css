@@ -374,6 +374,7 @@ fieldset p {
 
 .submit-button:hover {
   cursor: pointer;
+  background: rgb(239 239 239 / 30%);
 }
 
 label {
@@ -392,6 +393,8 @@ label > span, label > a {
 
 input, select {
   width: 80%;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
 }
 
 input#consent {
@@ -478,6 +481,10 @@ input#terms {
 
   .popup-content h2 {
     margin-top: 1rem;
+  }
+
+  .popup-card {
+    width: 33%;
   }
 
   .grid-layout {
